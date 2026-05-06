@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect } from "react";
- const Page:React.FC=()=>{
+const Page: React.FC = () => {
   
     useEffect(() => {
         // Inject the Donorbox script dynamically
@@ -15,24 +15,19 @@ import React, { useEffect } from "react";
           document.body.removeChild(script);
         };
       }, []);
-    return(
-        <div className="flex flex-col items-center  md:mx-0 mt-28 mb-12 mx-6  ">
-           
- 
-    <div className="w-full my-6 flex items-center justify-center">
-      <iframe
-        src="https://donorbox.org/embed/project-support-4?language=en-us"
-        name="donorbox"
-        allow="payment"
-        // @ts-expect-error
-        allowPaymentRequest
-        
-        frameBorder="0"
-        scrolling="no"
-        style={{ maxWidth: "500px", minWidth: "250px", width: "100%", height: "900px" }}
-      ></iframe>
-    </div>
-    </div>
+    return (
+      <div className="page-shell flex flex-col items-center">
+        <div className="my-2 w-full max-w-[560px] rounded-xl border border-slate-200 bg-white p-3 shadow-sm md:p-4">
+          <iframe
+            src="https://donorbox.org/embed/project-support-4?language=en-us"
+            name="donorbox"
+            allow="payment *"
+            frameBorder="0"
+            scrolling="no"
+            style={{ width: "100%", minWidth: "250px", maxWidth: "520px", height: "900px" }}
+          />
+        </div>
+      </div>
     )
 }
 export default Page;

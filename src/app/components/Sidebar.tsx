@@ -1,40 +1,27 @@
 'use client'
-import { UseMyContext } from "../context"
-import { GiHamburgerMenu } from "react-icons/gi";
-import { IoClose } from "react-icons/io5";
 import Link from 'next/link'
-export const Sidebar=()=>{
-    const {isOpen,setIsOpen} = UseMyContext()
-    const handleClick=()=>{
-        setIsOpen(!isOpen)
-    }
+
+type SidebarProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
+
+export const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
     return(
-        <div className={`w-screen h-screen z-50 flex items-start justify-start fixed top-0 bg-white transition-transform duration-3000 ease-in-out ${isOpen? 'translate-x-0':' -translate-x-full'}`}>
+        <div
+          id="mobile-menu"
+          aria-hidden={!isOpen}
+          className={`fixed top-0 z-50 flex h-screen w-screen items-start justify-start bg-white px-6 pt-20 transition-transform duration-300 ease-in-out md:hidden ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}
+        >
             {isOpen && 
-    <div className='text-5xl font-extrabold md:hidden cursor-pointer mx-2 fixed top-4 right-2' onClick={handleClick} ><IoClose /></div>}
+    <button type="button" aria-label="Close menu" className='fixed right-4 top-4 cursor-pointer rounded-full border border-slate-300 bg-white px-3 py-2 text-2xl font-extrabold' onClick={onClose} >×</button>}
     
-            <ol className="flex flex-col items-center mt-20 space-y-7 ml-8 font-extrabold text-xl " onClick={handleClick}>
-                <Link href='/'>
-                <li>
-                HOME
-                </li>
-                </Link>
-                <Link href='news-feed'>
-                <li>
-                 NEWS FEED
-                </li>
-                </Link>
-               <Link href='our-approach'>
-               <li>
-                OUR APPROACH
-                </li>
-               </Link>
-               <Link href='/about-us'>
-               <li>
-                 ABOUT US
-                </li>
-               </Link>
-            </ol>
+            <ul className="mt-8 flex flex-col space-y-7 font-extrabold text-xl" onClick={onClose}>
+                <li><Link href='/'>HOME</Link></li>
+                <li><Link href='/news-feed'>NEWS FEED</Link></li>
+                <li><Link href='/our-approach'>OUR APPROACH</Link></li>
+                <li><Link href='/about-us'>ABOUT US</Link></li>
+            </ul>
         </div>
     )
 }

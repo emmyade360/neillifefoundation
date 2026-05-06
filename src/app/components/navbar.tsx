@@ -1,83 +1,76 @@
 'use client'
 import Image from 'next/image'
-import { GiHamburgerMenu } from "react-icons/gi";
-import { BiSolidDonateHeart } from "react-icons/bi"
-import { IoClose } from "react-icons/io5";
-import { UseMyContext } from '../context';
 import { Sidebar } from "./Sidebar";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-export const Navbar=()=>{
-    const {setIsOpen,isOpen}= UseMyContext()
-    const handleClick=()=>{
-        setIsOpen(!isOpen)
-    }
-    const [isScrolled,setisScrolled]= useState(false)
-   useEffect(()=>{
-    const handleScroll=()=>{
-        const scrolled=window.scrollY;
-        if(scrolled>0){
-          setisScrolled(true);
-        }
-        else{   
-          setisScrolled(false)
-        }
-      }
-      window.addEventListener('scroll',handleScroll)
-   },[])
-   
-return(
-<nav className={`fixed top-0 z-50 bg-white w-full ${isScrolled ? 'md:h-20 border-b-2 border-gray-600 max-h-48' : 'md:h-28 max-h-52'}`}>
-    <div className='flex  md:mx-6 mx-2 md:mb-3  items-center justify-between '>
- <div className=' inline-flex items-center w-1/4 h-1/4'>
-    <Image src="/images/img1.png" width={100} height={100} alt=' sauri growth initiative logo' layout='responsive' className={`${isScrolled ? 'md:max-h-24 md:max-w-24':'md:max-h-32 md:max-w-32' }`}/>
-    <span>
-        <h2> <span className={`block font-bold text-sm ${isScrolled ? 'md:text-lg' : 'md:text-2xl'}`}>SAURI </span>
-            <span className={`block font-semibold text-xs  ${isScrolled ? 'md:text-xs' : 'md:text-sm'}`}>Growth Initiative</span></h2></span>
-    </div>
-    <ol className="hidden md:flex flex-row space-x-8">
-        <Link href='/'>
-        <li className={`font-bold text-xl hover:border-b-4 hover:scale-105 transition-all duration-150 border-blue-950 ${isScrolled ? 'md:text-lg' : 'md:text-xl'}`}>
-            HOME
-        </li>
-        </Link>
+export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-        <Link href='/news-feed'>
-        <li className={`font-bold text-xl hover:border-b-4 hover:scale-105 transition-all duration-150 border-blue-950 ${isScrolled ? 'md:text-lg' : 'md:text-xl'}`}>
-            NEWS FEED
-        </li>
-        </Link>
-        
-        <Link href='/about-us'>
-        <li className={`font-bold text-xl hover:border-b-4 hover:scale-105 transition-all duration-150 border-blue-950 ${isScrolled ? 'md:text-lg' : 'md:text-xl'}`}>
-            ABOUT US
-        </li>
-        </Link>
-        
-        <Link href='/our-approach'>
-        <li className={`font-bold text-xl hover:border-b-4 hover:scale-105 transition-all duration-150 border-blue-950 ${isScrolled ? 'md:text-lg' : 'md:text-xl'}`}>
-            OUR APPROACH
-        </li>
-        </Link>
-        
-    </ol>
-    <div>
-        <Link href='/donate'>
-        <button className='group rounded-3xl px-4 md:px-10 py-2 bg-black font-extrabold text-white ml-16
-        inline-flex gap-2'>
-            DONATE 
-            <span className='text-lg group-hover:scale-105 transition-all ease-in-out group-hover:text-2xl'>
-            <BiSolidDonateHeart />
-            </span>
+  const handleClick = () => setIsOpen(!isOpen)
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <nav className={`fixed top-0 z-50 w-full bg-white/95 backdrop-blur ${isScrolled ? 'border-b border-slate-300 shadow-sm' : ''}`}>
+      <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-[0.75rem] px-[0.75rem] py-[0.5rem] md:px-[1.5rem] md:py-[0.75rem]">
+        <div className='inline-flex items-center gap-[0.5rem]'>
+          <Image
+            src="/logo/neil-logo.png"
+            width={96}
+            height={96}
+            alt='Neil Life Foundation logo'
+            className={`h-[3.75rem] w-[3.75rem] object-contain md:h-[5rem] md:w-[5rem] ${isScrolled ? 'md:h-[4.5rem] md:w-[4.5rem]' : ''}`}
+            priority
+          />
+          <span>
+            <h2 className="leading-tight">
+              <span className={`block font-bold ${isScrolled ? 'text-[0.95rem] md:text-[1.125rem]' : 'text-[1rem] md:text-[1.5rem]'}`}>NEIL LIFE</span>
+              <span className={`block font-semibold ${isScrolled ? 'text-[0.7rem] md:text-[0.8rem]' : 'text-[0.75rem] md:text-[0.9rem]'}`}>Foundation</span>
+            </h2>
+          </span>
+        </div>
+
+        <ul className="hidden flex-row items-center space-x-[2rem] md:flex">
+          <li><Link href='/' className="text-[1rem] font-bold hover:text-blue-900">HOME</Link></li>
+          <li><Link href='/news-feed' className="text-[1rem] font-bold hover:text-blue-900">NEWS FEED</Link></li>
+          <li><Link href='/about-us' className="text-[1rem] font-bold hover:text-blue-900">ABOUT US</Link></li>
+          <li><Link href='/our-approach' className="text-[1rem] font-bold hover:text-blue-900">OUR APPROACH</Link></li>
+        </ul>
+
+        <div className="hidden md:block">
+          <Link href='/donate'>
+            <button type="button" className='group inline-flex gap-[0.5rem] rounded-[1.875rem] bg-black px-[1rem] py-[0.55rem] text-[0.875rem] font-extrabold text-white hover:bg-slate-800 lg:px-[2rem]'>
+              DONATE
+              <span className='text-[1.125rem] transition-all ease-in-out group-hover:scale-105 group-hover:text-[1.25rem]'>
+                +
+              </span>
+            </button>
+          </Link>
+        </div>
+
+        <button
+          type="button"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          onClick={handleClick}
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-900 transition hover:bg-slate-100 md:hidden"
+        >
+          <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
+          <div className="flex h-5 w-5 flex-col items-center justify-between">
+            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? 'translate-y-2 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+          </div>
         </button>
-        </Link>
-        
-    </div>
-    {isOpen ? 
-    <div className='text-3xl font-extrabold md:hidden cursor-pointer mx-2' onClick={handleClick} ><IoClose /></div> :<div onClick={handleClick} className='text-3xl font-extrabold md:hidden cursor-pointer mx-2'><GiHamburgerMenu/></div>}
-    </div>
-     <Sidebar/>
-</nav>
-)
+      </div>
+      <Sidebar isOpen={isOpen} onClose={() => setIsOpen(false)} />
+    </nav>
+  )
 }

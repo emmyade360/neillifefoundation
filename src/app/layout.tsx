@@ -1,22 +1,29 @@
 
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "./components/navbar";
-import {Appwrapper} from "@/app/context"
-import {Roboto_Slab} from 'next/font/google'
+import { Roboto_Slab, Poppins } from "next/font/google";
 import Footer from "./components/Footer";
 
-const roboto_slab= Roboto_Slab({
-  variable: '--font-Roboto_Slab',
-  weight:'400',
- subsets: ['latin']
-})
+const robotoSlab = Roboto_Slab({
+  variable: "--font-roboto-slab",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 
 export const metadata: Metadata = {
-  title: "Sauri Growth Initiative",
-  description: "Sauri growth initiative Official Website",
+  title: "Neil Life Foundation",
+  description: "Official website of Neil Life Foundation",
+  icons: {
+    icon: "/logo/neil-logo.png",
+  },
 };
 export default function RootLayout({
   children,
@@ -27,21 +34,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto_slab.variable} ${roboto_slab.className} font-rbt antialiased bg-white text-black flex flex-col min-h-screen`}
+        className={`${robotoSlab.variable} ${poppins.variable} ${robotoSlab.className} ${poppins.className} flex min-h-screen flex-col font-roboto antialiased`}
       >
-        <Appwrapper>
         <header>
         <Navbar/>
         </header>
-        <main className="flex-grow">
+        <main className="w-full flex-grow">
         {children}
         </main>
-        </Appwrapper>
-      <footer className="bottom-0">
-      <Footer/>
-      </footer>
-       
-        
+        <footer className="mt-auto">
+          <Footer/>
+        </footer>
       </body>
     </html>
   );

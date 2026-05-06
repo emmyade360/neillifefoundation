@@ -1,166 +1,135 @@
-import Image from "next/image"
-export default function page(){
-    return(
-        <div className="flex flex-col items-center md:items-start  mx-0 mt-16  w-full mb-10 md:mb-16">
-          <div className="w-full relative">
-            <Image src='/images/IMG_2469.JPG' alt="members of sauri growth initiative" 
-            width={1146} height={350} quality={100} className="w-full h-[200px] md:h-[350px] object-cover"/>
-          </div>
-          <div className="flex flex-col items-start justify-center  bg-white md:ml-28
-         w-80 md:w-[700px] px-3 md:px-8 text-blue-950 shadow-md -mt-10 md:-mt-16 z-30 py-4 md:py-5">
-        <div className="space-y-4 md:space-y-6">
-        <h1 className=" text-2xl md:text-4xl font-bold">
-            About Us
-        </h1>
-        <h1 className=" text-lg md:text-xl font-semibold md:leading-8">
-            The Sauri Growth Initiative for women and Youth with Disabilities
-            is a non-profit organization committed to empowering women and youth disabilities.
-        </h1>
-        <p className="font-poppins text-sm leading-6 md:leading-8 md:text-base ">
-       The organization was duly registered in 2022 and has since then financed a couple of activities 
-       to empower young women and girls with disabilities not until this year 2024.
-        </p>
-        <p className="font-poppins text-sm leading-6 md:leading-8 md:text-base ">
-       We got a grant from Urgent Action Fund Africa, which was used to embark on a 
-       a project "Empowering women and Girls with disabilities through inclusive Climate change actions and 
-       policies".
-        </p>
-        <p className="font-poppins text-sm leading-6 md:leading-8 md:text-base ">
-        Our primary goal is to combat discrimination and foster inclusivity across all facets of society.
-            We are driven by the mission to ensure that women and girls with disabilities have equal opportunitiesto thrive in the 
-            workforce, education, and political arenas.
-        </p>
-        <p className="font-poppins text-sm leading-6 md:leading-8 md:text-base ">
-            We firmly beleive in nurturing the potential of young people with disabilities
-            to a actively contribute to society and economic development.
-            Our overaching objective is to establish an inclusive and accessible environment 
-            for individuals withh disabilities, irrespective of gender, age, or disability type.
-        </p>
+import Image from "next/image";
+
+export default function Page() {
+  return (
+    <div className="page-shell">
+      <div className="relative w-full overflow-hidden rounded-[0.75rem]">
+        <Image
+          src="/images/EV_NYFF_10.jpeg"
+          alt="Members of Neil Life Foundation"
+          width={1146}
+          height={350}
+          className="h-[12.5rem] w-full object-cover md:h-[21.875rem]"
+          priority
+        />
+      </div>
+
+      <section className="relative z-10 mx-auto mt-[-2rem] w-full max-w-[43.75rem] rounded-[0.75rem] bg-white px-[1rem] py-[1.25rem] text-blue-950 shadow-md md:ml-[7rem] md:mt-[-3rem] md:px-[2rem] md:py-[1.5rem]">
+        <div className="space-y-[1rem] md:space-y-[1.5rem]">
+          <h1 className="text-[1.5rem] font-bold md:text-[2.25rem]">About Us</h1>
+          <h2 className="text-[1.125rem] font-semibold leading-[1.75rem] md:text-[1.25rem] md:leading-[2rem]">
+            Neil Life Foundation is a non-profit movement of hope, dignity, and opportunity for women, youth, and
+            persons with disabilities.
+          </h2>
+          <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
+            Since our founding, we have created safe spaces where every voice is heard and every participant is
+            recognized as a leader in their own community.
+          </p>
+          <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
+            Through trainings, stakeholder dialogues, and practical advocacy, we continue to equip communities with
+            tools for inclusive development, climate resilience, and social justice.
+          </p>
+          <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
+            Our mission is to transform barriers into bridges by ensuring that women and girls with disabilities have
+            equal access to education, livelihoods, policy participation, and protection.
+          </p>
         </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">
-                Vision
-            </h1>
-            <p className="text-sm font-poppins md:leading-8 md:text-base leading-6 ">
-                A world where women and youth with children with disabilities can thrive,
-                experiencing equal acess and opportunities without discrimination or barriers.
-            </p>
+
+        <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
+          <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Vision</h3>
+          <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
+            A world where women and youth with disabilities thrive with equal access and opportunities without
+            discrimination or barriers.
+          </p>
         </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">
-                Mission
-            </h1>
-            <p className="text-sm font-poppins md:leading-8 md:text-base leading-6` ">
-               To empower and youth with disabilities through inclusive education, advocacy, and 
-               accessible resources, promoting equal participation in:
-            </p>
-            <ul className="list-disc pl-8 font-poppins text-sm space-y-2 md:space-y-3 md:text-base">
-                <li>
-                    Governance and politics
-                </li>
-                <li>
-                    Employment
-                </li>
-                <li>
-                    Sexual and reproductive health
-                </li>
-               </ul>
+
+        <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
+          <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Mission</h3>
+          <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
+            To empower women and youth with disabilities through inclusive education, advocacy, and accessible
+            resources, promoting equal participation in governance, employment, and health.
+          </p>
+          <ul className="list-disc space-y-[0.5rem] pl-[2rem] text-[0.9375rem] md:text-[1rem]">
+            <li>Governance and politics</li>
+            <li>Employment</li>
+            <li>Sexual and reproductive health</li>
+          </ul>
         </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">
-                Core values
-            </h1>
-            <ul className="list-disc pl-8 font-poppins text-sm space-y-2 md:space-y-3 md:text-base">
-                <li>
-                    Inclusivity and accessibility
-                </li>
-                <li>
-                    Empowerment and self determination
-                </li>
-                <li>
-                    Equality and social justice 
-                </li>
-                <li>
-                    Collaboration and partnership
-                </li>
-               </ul>
-        </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">
-                Our pillars
-            </h1>
-            <ul className="list-disc pl-8 font-poppins text-sm space-y-2 md:space-y-3 md:text-base">
-                <li>
-                    Inclusive Education: accessible quallity eduaction
-                </li>
-                <li>
-                   Sexual Reproductive health Rights(SRHR): informed choices
-                </li>
-                <li>
-                    Economic Empowerment: fulfilling work 
-                </li>
-                <li>
-                    Advocacy and policy change: equality and inclusion
-                </li>
-               </ul>
-        </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">
-            Our Work
-            </h1>
-            <p className="text-sm font-poppins md:leading-8 md:text-base leading-6 ">
-            We focus on advocacy, empowerment, and inclusion for women and young persons
-             with disabilities.
-            </p>
-            <h1 className="text-lg font-semibold md:text-xl">
-            Our key initiatives include
-            </h1>
-            <p className="text-sm font-poppins md:leading-8 md:text-base leading-6 ">
-            Promoting rights and inclusion in leadership, governance, and policymaking
-Advocating for accessible sexual and reproductive health services
-Driving inclusive education and dignified work opportunities
-Training, capacity-building, and policy advocacy.
-            </p>
-        </div>
-        <div className="space-y-4 mt-4 md:space-y-6">
-            <h1 className="text-lg font-semibold md:text-xl">                
-            What Sets Us Apart
-            </h1>
-            <p className="text-sm font-poppins md:leading-8 md:text-base leading-6">
-            As an organization led by individuals with disabilities, we bring a unique perspective 
-            and approach to our work. Our lived experiences inform our strategies and ensure that our initiatives are authentic and effective.
-            </p>
-        </div>
-        <div className="mt-4 flex flex-col items-start gap-4 md:gap-10">
-            <h1 className="text-lg font-semibold md:text-xl">
-                Our Team
-            </h1>
-            <div className="flex items-center justify-between gap-4 md:gap-10">
-                <Image src="/images/bae73f08-9e15-44d8-9faa-b243597245db.JPG"
-                 alt="excutive director Comfort Ekwo" width={192} height={192}
-                 className="rounded-full w-28 h-28 md:w-48 md:h-48 object-cover"/>
-                 <h1><span className=" font-semibold md:text-lg">Comfort Ekwo</span>
-                 <span className="block text-sm md:text-base md:mt-1">Executive Director</span></h1>
-                 
-            </div>
-            <div className="flex items-center justify-between gap-4 md:gap-10">
-                <Image src="/images/PHOTO-2024-11-12-13-58-47.jpg"
-                 alt="Project Manager Precious Nneka" width={192} height={192}
-                 className="rounded-full w-28 h-28 md:w-48 md:h-48 object-cover"/>
-                 <h1><span className=" font-semibold md:text-lg">Ogbodo Precious Nneka</span>
-                 <span className="block text-sm md:text-base md:mt-1">Project Manager</span></h1>
-                 
-            </div>
-            <div className="flex items-center justify-between gap-4 md:gap-10">
-                <Image src="/images/officer.jpeg"
-                 alt="excutive director Comfort Ekwo" width={192} height={192}
-                 className="rounded-full w-28 h-28 md:w-48 md:h-48 object-cover"/>
-                 <h1><span className=" font-semibold md:text-lg">Janet Alabi</span>
-                 <span className="block text-sm md:text-base md:mt-1">Financial Officer</span></h1>
-                 
-            </div>
-        </div>
+
+        <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
+          <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Our Team</h3>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/executive-assistant.jpg"
+                  alt="Executive Director Ekwo Faith Owoloyi"
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24"
+                />
+                <p>
+                  <span className="block text-[1rem] font-semibold md:text-[1.125rem]">Ekwo Faith Owoloyi</span>
+                  <span className="block text-[0.875rem] text-slate-700 md:text-[1rem]">Executive Director</span>
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/account-officer.jpg"
+                  alt="Account Officer Dung Agnes Iyop"
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24"
+                />
+                <p>
+                  <span className="block text-[1rem] font-semibold md:text-[1.125rem]">Dung Agnes Iyop</span>
+                  <span className="block text-[0.875rem] text-slate-700 md:text-[1rem]">Account Officer</span>
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/program-officer.jpg"
+                  alt="Program Manager Solomon Ijauka"
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24"
+                />
+                <p>
+                  <span className="block text-[1rem] font-semibold md:text-[1.125rem]">Solomon Ijauka</span>
+                  <span className="block text-[0.875rem] text-slate-700 md:text-[1rem]">Program Manager</span>
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/monitoring-evaluation-officer.jpg"
+                  alt="Monitoring Officer Esther Christopher"
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  className="h-20 w-20 rounded-full object-cover md:h-24 md:w-24"
+                />
+                <p>
+                  <span className="block text-[1rem] font-semibold md:text-[1.125rem]">Esther Christopher</span>
+                  <span className="block text-[0.875rem] text-slate-700 md:text-[1rem]">Monitoring Officer</span>
+                </p>
+              </div>
+            </article>
           </div>
         </div>
-    )
+      </section>
+    </div>
+  );
 }

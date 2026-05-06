@@ -1,46 +1,35 @@
-import { IoArrowBack } from "react-icons/io5";
 import Link from "next/link";
 import Image from "next/image";
-export default function page(){
-    return(
-        <div className="flex flex-col items-start px-4 mt-24 md:mt-36 w-full space-y-6 mb-16 md:space-y-10
-        md:px-10">
-        <div className="inline-flex ">
-            <Link href="/news-feed" className="inline-flex items-center space-x-2">
-            <span className="text-xl md:text-2xl"><IoArrowBack /></span><span className="inline text-sm md:text-base">News Feed</span>
-            </Link>
-        </div>
-        <div className="flex flex-col space-y-8 md:space-y-12 ">
-            <h1 className="text-3xl font-poppins font-bold md:text-6xl md:font-extrabold md:leading-relaxed">
-                Significant Action on the Disability bill, Benue state.
-            </h1>
-        <Image src="/images/IMG_2477.JPG" alt="group picture of stakeholders including women and men" width={990} height={565}
-        className="md:max-h-[565px] md:min-w-[990px] object-cover"/>
-        </div>
-        <div className="flex flex-col space-y-3  md:items-start md:justify-center
-        md:ml-0 md:w-[700px] md:px-8 md:shadow-md md:mt-36 md:space-y-6 pb-6 md:pb-10">
-        <p className="inline py-1 px-2 w-max bg-neutral-300 
-         text-xs rounded-xl font-semibold">ACTION STORY</p>
-        <span className="text-base md:text-base text-blue-950 font-poppins leading-6 md:leading-8">         
-        On the 11th of November 2024, The Governor of Benue state Hyacinth Alia made a commitment to 
-        the swift passage of the Disability Bill marks a turning point for disability rights in the 
-        region. This bill, once passed, will address long-standing challenges faced by persons with disabilities
-         (PWDs) in accessing education, employment, and public infrastructure. Advocacy groups such as Inclusive Friends Association
-          (IFA) and Disability Rights Advocacy Center (DRAC) have played pivotal roles through persistent lobbying, awareness campaigns, and stakeholder engagement.
-        </span>
-        <span  className="text-base md:text-base text-blue-950 font-poppins leading-6 md:leading-8">
-        Governor Alia has demonstrated a strong commitment to inclusion by endorsing the bill 
-        and initiating its transmission to the State House of Assembly as an executive bill. 
-        His administration has also taken practical steps, such as appointing a Special Assistant on 
-        Disability Matters and a sign language interpreter, to amplify the voices of PWDs in governance.
-        </span>
-        <span className="text-base md:text-base text-blue-950 font-poppins leading-6 md:leading-8">
-        The bill’s passage will likely bring transformative benefits, including improved access to 
-        education, equitable employment opportunities, and disability-friendly public facilities.
-         Advocacy groups are hopeful that it will set a benchmark for other states to emulate, 
-         ultimately promoting inclusion and empowering PWDs to participate fully in society.
-        </span>
-        </div>
-        </div>
-    )
+import { StoryVideo } from "@/app/components/StoryVideo";
+import { STORY_VIDEO_URLS } from "@/lib/storyVideos";
+
+export default function Page() {
+  return (
+    <div className="page-shell flex flex-col items-start space-y-6 md:space-y-10">
+      <div className="inline-flex">
+        <Link href="/news-feed" className="inline-flex items-center space-x-2">
+          <span className="text-xl md:text-2xl">&lt;</span><span className="inline text-sm md:text-base">News Feed</span>
+        </Link>
+      </div>
+      <div className="flex w-full flex-col space-y-8 md:space-y-12">
+        <h1 className="text-3xl font-bold font-poppins md:text-6xl md:font-extrabold md:leading-relaxed">
+          Together We Rise: Collective Action for Disability Inclusion
+        </h1>
+        <Image src="/images/EV_NYFF_10.jpeg" alt="Community and partners standing together for inclusion" width={990} height={565} loading="lazy" sizes="100vw" className="h-auto w-full rounded-xl object-cover md:max-h-[565px]" />
+      </div>
+      <div className="flex w-full max-w-[760px] flex-col space-y-4 rounded-xl border border-slate-200 bg-white p-5 md:mt-8 md:space-y-6 md:p-8">
+        <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COLLECTIVE ACTION</p>
+        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+          This moment captures what Neil Life Foundation stands for: people from different backgrounds united by one purpose, to build a future where persons with disabilities participate fully and equally.
+        </p>
+        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+          Through collaboration with stakeholders, advocates, and community members, we continue to push for systems that are accessible, fair, and responsive to real needs.
+        </p>
+        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+          Every partnership formed is a step toward lasting social change. Every voice included is a step toward justice.
+        </p>
+      </div>
+      <StoryVideo src={STORY_VIDEO_URLS.collectiveAction} />
+    </div>
+  )
 }
