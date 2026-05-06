@@ -23,7 +23,7 @@ export function StoryVideo({ src, maxWidthClass = "max-w-[760px]" }: StoryVideoP
 
   return (
     <section className={`w-full ${maxWidthClass} space-y-3 rounded-xl border border-slate-200 bg-white p-5 md:p-8`}>
-      <h2 className="text-xl font-bold text-blue-950 md:text-2xl">Watch Story Video</h2>
+      <h2 className="text-xl font-bold text-brand-950 md:text-2xl">Watch Story Video</h2>
       <video
         src={src}
         controls

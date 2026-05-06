@@ -19,17 +19,17 @@ export default function Page() {
       </div>
       <div className="flex w-full max-w-[760px] flex-col space-y-4 rounded-xl border border-slate-200 bg-white p-5 md:mt-8 md:space-y-6 md:p-8">
         <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COMMUNITY LEADERSHIP</p>
-        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
           At Neil Life Foundation, every training is designed to move people from awareness to action. In this session, women, youth, and community leaders gathered to share lived experiences and practical solutions for inclusion.
         </p>
-        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
           Participants learned how to strengthen participation of persons with disabilities in decision-making, local advocacy, and community planning. The result was more than knowledge: it was renewed confidence and collective commitment.
         </p>
         <span className="w-full">
           <Image src="/images/EV_NYFF_9.jpeg" alt="Participants in attentive reflection during the session" width={467} height={311} loading="lazy" sizes="100vw" className="h-auto w-full rounded-lg object-cover" />
           <span className="text-xs">Participants listening, learning, and contributing to shared solutions.</span>
         </span>
-        <p className="text-base font-semibold font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-semibold font-poppins leading-6 text-brand-950 md:leading-8">
           We believe inclusive leadership begins when people are seen, heard, and supported to lead change in their own communities.
         </p>
       </div>

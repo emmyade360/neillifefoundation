@@ -155,14 +155,14 @@ export default function Page() {
 
       <div className="mt-6 flex justify-center">
        <Link href='/news-feed'>
-         <button className="rounded-full bg-blue-900 px-6 py-2 text-sm font-bold text-white transition hover:bg-blue-800">
+         <button className="rounded-full bg-brand-700 px-6 py-2 text-sm font-bold text-white transition hover:bg-brand-800">
            See More
          </button>
        </Link>
       </div>
      </div>
      <div className="md:mb-4 mb-10 w-full md:min-h-[500px] px-8 md:mt-6">
-      <div className="bg-slate-100  w-full flex flex-col md:flex-row justify-between items-start
+      <div className="bg-brand-surface w-full flex flex-col md:flex-row justify-between items-start
       md:px-36 pt-10 space-x-5 px-4 space-y-3 pb-3">
       <Image
       src='/images/EV_NYFF_1.jpeg'
@@ -183,7 +183,7 @@ export default function Page() {
             voice, and opportunities needed to thrive and lead.
           </h1>
           <Link href='/about-us'>
-          <button className="bg-blue-900 text-white font-bold md:px-3 md:py-2 py-1 px-2 
+          <button className="bg-brand-700 text-white font-bold md:px-3 md:py-2 py-1 px-2 
           rounded-3xl hover:scale-105 transition-all ease-in-out">
             Learn More
           </button>
@@ -194,7 +194,7 @@ export default function Page() {
       </div>  
       <section className="w-full px-6 pb-10 md:px-8">
         <div className="mb-6 flex flex-col gap-2 md:mb-10 md:max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-wide text-blue-800">Our approach</p>
+          <p className="text-sm font-bold uppercase tracking-wide text-brand-700">Our approach</p>
           <h2 className="font-poppins text-3xl font-extrabold text-slate-950 md:text-5xl">
             Practical action, built around real people.
           </h2>
@@ -213,11 +213,11 @@ export default function Page() {
                 className="h-56 w-full object-cover"
               />
               <div className="flex flex-1 flex-col gap-3 p-5">
-                <h3 className="font-poppins text-xl font-bold text-blue-950">{card.title}</h3>
+                <h3 className="font-poppins text-xl font-bold text-brand-950">{card.title}</h3>
                 <p className="flex-1 text-sm leading-6 text-slate-700 md:text-base">{card.copy}</p>
                 <Link
                   href={card.href}
-                  className="mt-2 inline-flex w-max rounded-3xl bg-blue-900 px-5 py-2 text-sm font-bold text-white transition hover:bg-blue-800"
+                  className="mt-2 inline-flex w-max rounded-3xl bg-brand-700 px-5 py-2 text-sm font-bold text-white transition hover:bg-brand-800"
                 >
                   Learn More
                 </Link>

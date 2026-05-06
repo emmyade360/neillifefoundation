@@ -38,15 +38,15 @@ export default function Page() {
           </div>
         </div>
 
-        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
           When communities gather to listen and learn together, barriers begin to fall. This dialogue session created room
           for honest stories, practical ideas, and renewed commitment to disability inclusion.
         </p>
-        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
           Participants explored how inclusion can be strengthened through local leadership, accessible communication,
           and collaborative policy action.
         </p>
-        <p className="text-base font-poppins leading-6 text-blue-950 md:leading-8">
+        <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
           At Neil Life Foundation, we believe transformation happens when people are not spoken for, but empowered to speak for themselves.
         </p>
       </div>

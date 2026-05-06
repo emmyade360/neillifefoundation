@@ -18,13 +18,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <div className="page-shell flex flex-col items-start gap-6 md:gap-10">
-      <Link href="/our-approach" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-900 hover:underline">
+      <Link href="/our-approach" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:underline">
         <span className="text-lg">&lt;</span>
         <span>Our Approach</span>
       </Link>
 
       <section className="w-full space-y-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm md:p-8">
-        <h1 className="text-3xl font-extrabold text-blue-950 md:text-5xl">{approach.title}</h1>
+        <h1 className="text-3xl font-extrabold text-brand-950 md:text-5xl">{approach.title}</h1>
         <p className="text-base leading-7 text-slate-700 md:text-lg">{approach.summary}</p>
 
         {approach.details.map((line) => (
@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </section>
 
       <section className="w-full rounded-xl border border-slate-200 bg-white p-5 shadow-sm md:p-8">
-        <p className="mb-3 text-sm font-semibold text-blue-900 md:text-base">{approach.videoTitle}</p>
+        <p className="mb-3 text-sm font-semibold text-brand-700 md:text-base">{approach.videoTitle}</p>
         <StoryVideo src={approach.videoSrc} maxWidthClass="max-w-none" />
       </section>
     </div>

@@ -14,45 +14,39 @@ export default function Page() {
         />
       </div>
 
-      <section className="relative z-10 mx-auto mt-[-2rem] w-full max-w-[43.75rem] rounded-[0.75rem] bg-white px-[1rem] py-[1.25rem] text-blue-950 shadow-md md:ml-[7rem] md:mt-[-3rem] md:px-[2rem] md:py-[1.5rem]">
+      <section className="relative z-10 mx-auto mt-[-2rem] w-full max-w-[43.75rem] rounded-[0.75rem] bg-white px-[1rem] py-[1.25rem] text-brand-950 shadow-md md:ml-[7rem] md:mt-[-3rem] md:px-[2rem] md:py-[1.5rem]">
         <div className="space-y-[1rem] md:space-y-[1.5rem]">
           <h1 className="text-[1.5rem] font-bold md:text-[2.25rem]">About Us</h1>
           <h2 className="text-[1.125rem] font-semibold leading-[1.75rem] md:text-[1.25rem] md:leading-[2rem]">
-            Neil Life Foundation is a non-profit movement of hope, dignity, and opportunity for women, youth, and
-            persons with disabilities.
+            A foundation on a mission to make inclusion real, not optional.
           </h2>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            Since our founding, we have created safe spaces where every voice is heard and every participant is
-            recognized as a leader in their own community.
+            Neil Life Foundation exists to bridge the gap between vulnerability and empowerment. We provide targeted support for youth and women with disabilities, advocating for systemic change and providing the practical resources necessary for a life of self-reliance, dignity, and independence.
           </p>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            Through trainings, stakeholder dialogues, and practical advocacy, we continue to equip communities with
-            tools for inclusive development, climate resilience, and social justice.
+            Our work focuses on practical inclusion: making sure people access education, credible livelihoods, dignified health services, and meaningful participation in decisions that shape their lives.
           </p>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            Our mission is to transform barriers into bridges by ensuring that women and girls with disabilities have
-            equal access to education, livelihoods, policy participation, and protection.
+            We believe systemic change starts with local leadership, and our interventions are designed to build skill, confidence, accountability, and long-term resilience.
           </p>
         </div>
 
         <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
           <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Vision</h3>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            A world where women and youth with disabilities thrive with equal access and opportunities without
-            discrimination or barriers.
+            A world where disability is never a boundary and inclusion is the default — where every person with a disability has the support, voice, and opportunities needed to thrive.
           </p>
         </div>
 
         <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
           <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Mission</h3>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            To empower women and youth with disabilities through inclusive education, advocacy, and accessible
-            resources, promoting equal participation in governance, employment, and health.
+            To empower women and youth with disabilities through inclusive education, advocacy, mentorship, and resource access, while amplifying the leadership of communities often left behind.
           </p>
           <ul className="list-disc space-y-[0.5rem] pl-[2rem] text-[0.9375rem] md:text-[1rem]">
-            <li>Governance and politics</li>
-            <li>Employment</li>
-            <li>Sexual and reproductive health</li>
+            <li>Expand inclusive education and livelihood pathways.</li>
+            <li>Build leadership, confidence, and community advocacy.</li>
+            <li>Drive policy reforms so systems work for everyone.</li>
           </ul>
         </div>
 

@@ -8,8 +8,8 @@ export default function Page() {
         style={{ backgroundImage: 'url(/images/EV_NYFF_4.jpeg)' }}
         className="relative mb-10 flex h-[200px] w-full items-center justify-center rounded-xl bg-cover bg-center bg-no-repeat md:mb-16 md:h-[490px]"
       >
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-blue-950 opacity-70" />
-        <h1 className="relative inline-block pb-6 font-poppins text-3xl font-extrabold text-white after:absolute after:bottom-0 after:right-1/2 after:block after:w-20 after:translate-x-1/2 after:transform after:border-b-8 after:border-blue-500 md:pb-10 md:text-6xl">
+        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[rgba(77,20,111,0.75)]" />
+        <h1 className="relative inline-block pb-6 font-poppins text-3xl font-extrabold text-white after:absolute after:bottom-0 after:right-1/2 after:block after:w-20 after:translate-x-1/2 after:transform after:border-b-8 after:border-brand-500 md:pb-10 md:text-6xl">
           Our Latest Impact Stories
         </h1>
       </div>
@@ -20,7 +20,7 @@ export default function Page() {
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COMMUNITY LEADERSHIP</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">Building Inclusive Leadership with Persons with Disabilities in Benue State</h2>
           <Link href='/news-feed/empowering-women-with-disabilities-in-benue-state'>
-            <button className="inline-block w-max rounded-2xl bg-blue-800 px-4 py-1 text-lg font-semibold text-white">Read Story</button>
+            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
           </Link>
         </div>
       </article>
@@ -31,7 +31,7 @@ export default function Page() {
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">INCLUSION DIALOGUE</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">From Silence to Voice: How Dialogue is Advancing Disability Inclusion</h2>
           <Link href='/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action'>
-            <button className="inline-block w-max rounded-2xl bg-blue-800 px-4 py-1 text-lg font-semibold text-white">Read Story</button>
+            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
           </Link>
         </div>
       </article>
@@ -42,7 +42,7 @@ export default function Page() {
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COLLECTIVE ACTION</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">Together We Rise: Partnerships Driving Lasting Change</h2>
           <Link href='/news-feed/significant-action-on-the-disability-bill-benue-state'>
-            <button className="inline-block w-max rounded-2xl bg-blue-800 px-4 py-1 text-lg font-semibold text-white">Read Story</button>
+            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
           </Link>
         </div>
       </article>

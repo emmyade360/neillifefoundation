@@ -17,7 +17,7 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <nav className={`fixed top-0 z-50 w-full bg-white/95 backdrop-blur ${isScrolled ? 'border-b border-slate-300 shadow-sm' : ''}`}>
+    <nav className={`fixed top-0 z-50 w-full bg-white/95 backdrop-blur ${isScrolled ? 'border-b border-brand-700 shadow-sm' : ''}`}>
       <div className="mx-auto flex w-full max-w-[90rem] items-center justify-between gap-[0.75rem] px-[0.75rem] py-[0.5rem] md:px-[1.5rem] md:py-[0.75rem]">
         <div className='inline-flex items-center gap-[0.5rem]'>
           <Image
@@ -37,15 +37,15 @@ export const Navbar = () => {
         </div>
 
         <ul className="hidden flex-row items-center space-x-[2rem] md:flex">
-          <li><Link href='/' className="text-[1rem] font-bold hover:text-blue-900">HOME</Link></li>
-          <li><Link href='/news-feed' className="text-[1rem] font-bold hover:text-blue-900">NEWS FEED</Link></li>
-          <li><Link href='/about-us' className="text-[1rem] font-bold hover:text-blue-900">ABOUT US</Link></li>
-          <li><Link href='/our-approach' className="text-[1rem] font-bold hover:text-blue-900">OUR APPROACH</Link></li>
+          <li><Link href='/' className="text-[1rem] font-bold hover:text-brand-700">HOME</Link></li>
+          <li><Link href='/news-feed' className="text-[1rem] font-bold hover:text-brand-700">NEWS FEED</Link></li>
+          <li><Link href='/about-us' className="text-[1rem] font-bold hover:text-brand-700">ABOUT US</Link></li>
+          <li><Link href='/our-approach' className="text-[1rem] font-bold hover:text-brand-700">OUR APPROACH</Link></li>
         </ul>
 
         <div className="hidden md:block">
           <Link href='/donate'>
-            <button type="button" className='group inline-flex gap-[0.5rem] rounded-[1.875rem] bg-black px-[1rem] py-[0.55rem] text-[0.875rem] font-extrabold text-white hover:bg-slate-800 lg:px-[2rem]'>
+            <button type="button" className='group inline-flex gap-[0.5rem] rounded-[1.875rem] bg-brand-700 px-[1rem] py-[0.55rem] text-[0.875rem] font-extrabold text-white hover:bg-brand-800 lg:px-[2rem]'>
               DONATE
               <span className='text-[1.125rem] transition-all ease-in-out group-hover:scale-105 group-hover:text-[1.25rem]'>
                 +
