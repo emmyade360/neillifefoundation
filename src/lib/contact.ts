@@ -1,6 +1,6 @@
 export const CONTACT_INFO = {
   addressLines: [
-    "Bez plaza, opposite Mountain of fire",
+    "BEFS Plaza, opposite Mountain of Fire",
     "Utako, Abuja.",
   ],
   phone: "07034852490",

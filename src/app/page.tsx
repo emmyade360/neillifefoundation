@@ -31,37 +31,79 @@ const approachCards = [
 export default function Page() {
   return (
     <div className="page-shell flex flex-col items-center">
-      <div className="w-full md:p-4">
-      <div className="min-w-full relative  bg-indigo-500 ">
-            <div className="absolute right-0 top-0 h-full w-full bg-gradient-to-t from-indigo-950 to-transparent"></div>
+      <section className="relative isolate flex min-h-[34rem] w-full overflow-hidden rounded-lg sm:min-h-[38rem] md:min-h-[42rem]">
         <Image
           src='/images/EV_NYFF_4.jpeg'
           alt='Neil Life Foundation community gathering'
           width={1080}
           height={719}
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1080px) 1080px, 1280px"
           priority
           fetchPriority="high"
           quality={85}
-          
-          className="h-auto w-full max-h-[50vh] max-w-full object-cover md:max-h-[75vh]"
+          className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
-        <div  className="absolute md:top-36 md:left-20 backdrop-blur-xs top-12 left-8">
-        <h1 className=' font-extrabold md:text-4xl text-2xl text-white font-poppins'>
-            We are Neil Life Foundation <span className="block">championing dignity, inclusion, and equal opportunity.</span> 
-            <span className="block">We empower women, youth, and persons with disabilities to lead change.</span>
-        </h1>
-        <Link href='/about-us'>
-        <button className="md:text-lg text-sm font-extrabold bg-indigo-950 mt-4 p-2 text-white">
-          More About Us</button>
-        </Link>
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-indigo-950 via-indigo-950/60 to-transparent" />
+
+        <div className="flex w-full items-end px-4 pb-10 pt-24 sm:px-6 sm:pb-12 md:px-8 md:pb-16">
+          <div className="max-w-3xl">
+            <h1 className='font-poppins text-3xl font-extrabold leading-tight text-white sm:text-4xl md:text-5xl'>
+              We are Neil Life Foundation
+              <span className="mt-2 block text-2xl sm:text-3xl md:text-4xl">Championing dignity, inclusion, and equal opportunity.</span>
+            </h1>
+            <p className="mt-4 max-w-2xl text-base font-semibold leading-7 text-white/90 sm:text-lg">
+              We empower women, youth, and persons with disabilities to lead change.
+            </p>
+            <Link
+              href='/about-us'
+              className="mt-6 inline-flex rounded bg-indigo-950 px-5 py-3 text-sm font-extrabold text-white transition hover:bg-indigo-900 md:text-base"
+            >
+              More About Us
+            </Link>
+          </div>
         </div>
-        
+      </section>
+      {/* Mission & Vision Section */}
+      <section className="w-full bg-gradient-to-b from-brand-50 to-white px-4 py-12 sm:px-6 sm:py-16 md:px-12 md:py-20 mt-0 sm:mt-2 md:mt-4">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Mission */}
+            <div className="space-y-3 sm:space-y-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-900">Our Mission</h2>
+              <p className="text-sm sm:text-base md:text-lg text-brand-700 leading-relaxed">
+                To empower women and youth with disabilities through inclusive education, advocacy, mentorship, and resource access, while amplifying the leadership of communities often left behind.
+              </p>
+              <ul className="space-y-2 sm:space-y-3 pt-2 sm:pt-4">
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <span className="text-brand-600 font-bold text-lg sm:text-xl flex-shrink-0" aria-hidden="true">&#10003;</span>
+                  <span className="text-sm sm:text-base text-brand-700">Expand inclusive education and livelihood pathways.</span>
+                </li>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <span className="text-brand-600 font-bold text-lg sm:text-xl flex-shrink-0" aria-hidden="true">&#10003;</span>
+                  <span className="text-sm sm:text-base text-brand-700">Build leadership, confidence, and community advocacy.</span>
+                </li>
+                <li className="flex items-start gap-2 sm:gap-3">
+                  <span className="text-brand-600 font-bold text-lg sm:text-xl flex-shrink-0" aria-hidden="true">&#10003;</span>
+                  <span className="text-sm sm:text-base text-brand-700">Drive policy reforms so systems work for everyone.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Vision */}
+            <div className="space-y-3 sm:space-y-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-900">Our Vision</h2>
+              <p className="text-sm sm:text-base md:text-lg text-brand-700 leading-relaxed">
+                A world where disability is never a boundary and inclusion is the default &mdash; where every person with a disability has the support, voice, and opportunities needed to thrive.
+              </p>
+              <div className="mt-4 sm:mt-8 p-4 sm:p-6 bg-white rounded-lg border-l-4 border-brand-600 shadow-sm">
+                <p className="text-xs sm:text-sm md:text-base text-brand-700 italic leading-relaxed">
+                  &quot;We believe systemic change starts with local leadership, and our interventions are designed to build skill, confidence, accountability, and long-term resilience.&quot;
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        
-      </div>
+      </section>
      <div className="w-full my-3 md:px-3 flex-grow">
       <div className="relative overflow-hidden rounded-[2rem]">
         <Image
@@ -70,12 +112,12 @@ export default function Page() {
           width={1080}
           height={360}
           loading="lazy"
-          sizes="100vw"
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1080px"
           className="h-auto w-full min-h-64 object-cover md:max-h-64"
         />
         <div className="absolute inset-0 bg-black/35" />
         <div className="absolute top-6 left-4 md:left-8">
-          <h1 className="text-white font-extrabold text-3xl md:text-4xl font-poppins">Latest News</h1>
+          <h2 className="text-white font-extrabold text-3xl md:text-4xl font-poppins">Latest News</h2>
         </div>
       </div>
 
@@ -89,7 +131,7 @@ export default function Page() {
                 height={231}
                 width={288}
                 loading="lazy"
-                sizes="18rem"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
                 className="h-[18rem] w-full object-cover"
               />
             </div>
@@ -113,7 +155,7 @@ export default function Page() {
                 height={231}
                 width={288}
                 loading="lazy"
-                sizes="18rem"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
                 className="h-[18rem] w-full object-cover"
               />
             </div>
@@ -137,7 +179,7 @@ export default function Page() {
                 height={231}
                 width={288}
                 loading="lazy"
-                sizes="18rem"
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
                 className="h-[18rem] w-full object-cover"
               />
             </div>
@@ -154,10 +196,11 @@ export default function Page() {
       </div>
 
       <div className="mt-6 flex justify-center">
-       <Link href='/news-feed'>
-         <button className="rounded-full bg-brand-700 px-6 py-2 text-sm font-bold text-white transition hover:bg-brand-800">
-           See More
-         </button>
+       <Link
+         href='/news-feed'
+         className="inline-flex rounded-full bg-brand-700 px-6 py-2 text-sm font-bold text-white transition hover:bg-brand-800"
+       >
+         See More
        </Link>
       </div>
      </div>
@@ -173,20 +216,20 @@ export default function Page() {
       sizes="(max-width: 768px) 100vw, 500px"
       className="h-auto w-full max-w-[500px] object-cover md:min-h-80"/>
       <div className="flex flex-col justify-between space-y-2 md:space-y-12">
-        <h1 className="md:text-5xl font-extrabold text-3xl text-black font-poppins">
+        <h2 className="md:text-5xl font-extrabold text-3xl text-black font-poppins">
           Our Mission & Vision
-        </h1>
+        </h2>
         <div className="md:bg-white pt-1 px-2 pb-2 md:p-8 w-full flex flex-col 
         items-center justify-center gap-4 shadow-lg">
-          <h1 className="text-wrap text-base md:text-lg md:font-bold font-medium md:leading-10 font-poppins">
+          <p className="text-wrap text-base md:text-lg md:font-bold font-medium md:leading-10 font-poppins">
             We envision communities where every person, regardless of disability, has the support,
             voice, and opportunities needed to thrive and lead.
-          </h1>
-          <Link href='/about-us'>
-          <button className="bg-brand-700 text-white font-bold md:px-3 md:py-2 py-1 px-2 
-          rounded-3xl hover:scale-105 transition-all ease-in-out">
+          </p>
+          <Link
+            href='/about-us'
+            className="rounded-3xl bg-brand-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-brand-800 md:text-base"
+          >
             Learn More
-          </button>
           </Link>
         </div>
       </div> 

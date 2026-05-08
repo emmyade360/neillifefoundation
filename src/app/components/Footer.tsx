@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { CONTACT_INFO } from '@/lib/contact';
+import { PRIMARY_NAVIGATION } from '@/lib/site';
 
 function Footer() {
   return (
@@ -38,23 +39,28 @@ function Footer() {
         <div className='flex flex-col items-center justify-center space-y-[1rem] md:items-start'>
           <h2 className='text-[1.125rem] font-semibold text-brand-950'>Connect with us</h2>
           <div className='flex items-center space-x-[1rem]'>
-            <a href='https://www.facebook.com/neillifefoundation' target='_blank' rel='noopener noreferrer'>
-              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-brand-700 text-sm font-bold hover:text-brand-700'>f</span>
+            <a href='https://www.facebook.com/share/18aREuGdKX/?mibextid=wwXIfr' target='_blank' rel='noopener noreferrer' aria-label="Neil Life Foundation on Facebook">
+              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-brand-700 text-sm font-bold hover:text-brand-700' aria-hidden="true">f</span>
             </a>
-            <a href='https://www.instagram.com/neillifefoundation' target='_blank' rel='noopener noreferrer'>
-              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-slate-300 text-[10px] font-bold hover:text-pink-700'>IG</span>
+            <a href='https://www.instagram.com/neil_life_foundation_?igsh=aWtnZjJiNHQwN2h5&utm_source=qr' target='_blank' rel='noopener noreferrer' aria-label="Neil Life Foundation on Instagram">
+              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-slate-300 text-[10px] font-bold hover:text-pink-700' aria-hidden="true">IG</span>
             </a>
-            <a href='https://x.com/neillifefdn' target='_blank' rel='noopener noreferrer'>
-              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-brand-700 text-sm font-bold hover:text-brand-700'>X</span>
+            <a href='https://x.com/neillifefdn' target='_blank' rel='noopener noreferrer' aria-label="Neil Life Foundation on X">
+              <span className='inline-flex h-8 w-8 items-center justify-center rounded border border-brand-700 text-sm font-bold hover:text-brand-700' aria-hidden="true">X</span>
             </a>
           </div>
         </div>
 
         <div className='flex flex-col items-center space-y-[0.5rem] md:items-start'>
           <h2 className='mb-[0.25rem] text-[1.25rem] font-semibold text-brand-950'>Quick links</h2>
-          <Link href='/news-feed'><p className='text-[0.9375rem] text-brand-950'>News Feed</p></Link>
-          <Link href='/about-us'><p className='text-[0.9375rem] text-brand-950'>About Us</p></Link>
-          <Link href='/our-approach'><p className='text-[0.9375rem] text-brand-950'>Our Approach</p></Link>
+          {PRIMARY_NAVIGATION.filter((item) => item.href !== "/").map((item) => (
+            <Link key={item.href} href={item.href} className='text-[0.9375rem] text-brand-950'>
+              {item.label
+                .toLowerCase()
+                .replace(/\b\w/g, (char) => char.toUpperCase())}
+            </Link>
+          ))}
+          <Link href='/donate' className='text-[0.9375rem] text-brand-950'>Donate</Link>
         </div>
       </div>
     </div>

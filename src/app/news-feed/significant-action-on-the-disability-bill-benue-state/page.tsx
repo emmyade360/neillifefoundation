@@ -1,7 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 import { StoryVideo } from "@/app/components/StoryVideo";
 import { STORY_VIDEO_URLS } from "@/lib/storyVideos";
+
+export const metadata: Metadata = {
+  title: "Collective Action for Disability Inclusion",
+  description: "A Neil Life Foundation impact story on partnerships, advocacy, and collective action for lasting disability inclusion.",
+  alternates: {
+    canonical: "/news-feed/significant-action-on-the-disability-bill-benue-state",
+  },
+};
 
 export default function Page() {
   return (
@@ -15,7 +24,7 @@ export default function Page() {
         <h1 className="text-3xl font-bold font-poppins md:text-6xl md:font-extrabold md:leading-relaxed">
           Together We Rise: Collective Action for Disability Inclusion
         </h1>
-        <Image src="/images/EV_NYFF_10.jpeg" alt="Community and partners standing together for inclusion" width={990} height={565} loading="lazy" sizes="100vw" className="h-auto w-full rounded-xl object-cover md:max-h-[565px]" />
+        <Image src="/images/EV_NYFF_10.jpeg" alt="Community and partners standing together for inclusion" width={990} height={565} loading="lazy" sizes="(max-width: 640px) 640px, (max-width: 1024px) 900px, 990px" className="h-auto w-full rounded-xl object-cover md:max-h-[565px]" />
       </div>
       <div className="flex w-full max-w-[760px] flex-col space-y-4 rounded-xl border border-slate-200 bg-white p-5 md:mt-8 md:space-y-6 md:p-8">
         <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COLLECTIVE ACTION</p>

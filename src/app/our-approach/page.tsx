@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { APPROACHES } from "@/lib/approaches";
+
+export const metadata: Metadata = {
+  title: "Our Approach",
+  description: "Explore Neil Life Foundation's practical approach to advocacy, inclusive policy change, and health dignity.",
+  alternates: {
+    canonical: "/our-approach",
+  },
+};
 
 export default function Page() {
   return (

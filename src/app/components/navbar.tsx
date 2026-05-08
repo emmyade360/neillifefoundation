@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Sidebar } from "./Sidebar";
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { PRIMARY_NAVIGATION } from '@/lib/site';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,20 +38,24 @@ export const Navbar = () => {
         </div>
 
         <ul className="hidden flex-row items-center space-x-[2rem] md:flex">
-          <li><Link href='/' className="text-[1rem] font-bold hover:text-brand-700">HOME</Link></li>
-          <li><Link href='/news-feed' className="text-[1rem] font-bold hover:text-brand-700">NEWS FEED</Link></li>
-          <li><Link href='/about-us' className="text-[1rem] font-bold hover:text-brand-700">ABOUT US</Link></li>
-          <li><Link href='/our-approach' className="text-[1rem] font-bold hover:text-brand-700">OUR APPROACH</Link></li>
+          {PRIMARY_NAVIGATION.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className="text-[1rem] font-bold hover:text-brand-700">
+                {item.label}
+              </Link>
+            </li>
+          ))}
         </ul>
 
         <div className="hidden md:block">
-          <Link href='/donate'>
-            <button type="button" className='group inline-flex gap-[0.5rem] rounded-[1.875rem] bg-brand-700 px-[1rem] py-[0.55rem] text-[0.875rem] font-extrabold text-white hover:bg-brand-800 lg:px-[2rem]'>
-              DONATE
-              <span className='text-[1.125rem] transition-all ease-in-out group-hover:scale-105 group-hover:text-[1.25rem]'>
-                +
-              </span>
-            </button>
+          <Link
+            href='/donate'
+            className='group inline-flex gap-[0.5rem] rounded-[1.875rem] bg-brand-700 px-[1rem] py-[0.55rem] text-[0.875rem] font-extrabold text-white hover:bg-brand-800 lg:px-[2rem]'
+          >
+            DONATE
+            <span className='text-[1.125rem] transition-all ease-in-out group-hover:scale-105 group-hover:text-[1.25rem]' aria-hidden="true">
+              +
+            </span>
           </Link>
         </div>
 

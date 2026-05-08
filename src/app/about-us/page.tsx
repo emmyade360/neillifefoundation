@@ -1,4 +1,13 @@
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about Neil Life Foundation's mission, vision, team, and community-led work for disability inclusion.",
+  alternates: {
+    canonical: "/about-us",
+  },
+};
 
 export default function Page() {
   return (
@@ -9,6 +18,7 @@ export default function Page() {
           alt="Members of Neil Life Foundation"
           width={1146}
           height={350}
+          sizes="(max-width: 640px) 640px, (max-width: 1024px) 900px, 1146px"
           className="h-[12.5rem] w-full object-cover md:h-[21.875rem]"
           priority
         />
@@ -34,7 +44,7 @@ export default function Page() {
         <div className="mt-[1.25rem] space-y-[1rem] md:mt-[1.5rem] md:space-y-[1.5rem]">
           <h3 className="text-[1.125rem] font-semibold md:text-[1.25rem]">Vision</h3>
           <p className="text-[0.9375rem] leading-[1.625rem] md:text-[1rem] md:leading-[2rem]">
-            A world where disability is never a boundary and inclusion is the default — where every person with a disability has the support, voice, and opportunities needed to thrive.
+            A world where disability is never a boundary and inclusion is the default &mdash; where every person with a disability has the support, voice, and opportunities needed to thrive.
           </p>
         </div>
 

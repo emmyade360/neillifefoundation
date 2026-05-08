@@ -1,11 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { StoryVideo } from "@/app/components/StoryVideo";
 import { APPROACHES, getApproachBySlug } from "@/lib/approaches";
 
 export function generateStaticParams() {
   return APPROACHES.map((approach) => ({ slug: approach.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const approach = getApproachBySlug(slug);
+
+  if (!approach) {
+    return {};
+  }
+
+  return {
+    title: approach.title,
+    description: approach.summary,
+    alternates: {
+      canonical: `/our-approach/${approach.slug}`,
+    },
+    openGraph: {
+      title: approach.title,
+      description: approach.summary,
+      images: [
+        {
+          url: approach.imageSrc,
+          alt: approach.imageAlt,
+        },
+      ],
+    },
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
@@ -40,7 +68,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             width={1000}
             height={560}
             loading="lazy"
-            sizes="100vw"
+            sizes="(max-width: 640px) 640px, (max-width: 1024px) 900px, 1000px"
             className="h-auto w-full rounded-lg object-cover"
           />
           <span className="mt-2 block text-xs text-slate-600">{approach.imageCaption}</span>

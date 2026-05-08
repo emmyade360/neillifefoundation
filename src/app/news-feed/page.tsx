@@ -1,5 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "News Feed",
+  description: "Read Neil Life Foundation impact stories, inclusion updates, and community advocacy news.",
+  alternates: {
+    canonical: "/news-feed",
+  },
+};
 
 export default function Page() {
   return (
@@ -19,8 +28,8 @@ export default function Page() {
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COMMUNITY LEADERSHIP</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">Building Inclusive Leadership with Persons with Disabilities in Benue State</h2>
-          <Link href='/news-feed/empowering-women-with-disabilities-in-benue-state'>
-            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
+          <Link href='/news-feed/empowering-women-with-disabilities-in-benue-state' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+            Read Story
           </Link>
         </div>
       </article>
@@ -30,8 +39,8 @@ export default function Page() {
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">INCLUSION DIALOGUE</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">From Silence to Voice: How Dialogue is Advancing Disability Inclusion</h2>
-          <Link href='/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action'>
-            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
+          <Link href='/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+            Read Story
           </Link>
         </div>
       </article>
@@ -41,8 +50,8 @@ export default function Page() {
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
           <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COLLECTIVE ACTION</p>
           <h2 className="text-xl font-bold font-poppins md:text-3xl">Together We Rise: Partnerships Driving Lasting Change</h2>
-          <Link href='/news-feed/significant-action-on-the-disability-bill-benue-state'>
-            <button className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white hover:bg-brand-800 transition">Read Story</button>
+          <Link href='/news-feed/significant-action-on-the-disability-bill-benue-state' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+            Read Story
           </Link>
         </div>
       </article>
