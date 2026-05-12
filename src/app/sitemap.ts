@@ -7,9 +7,10 @@ const staticRoutes = [
   "/about-us",
   "/donate",
   "/news-feed",
-  "/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action",
-  "/news-feed/empowering-women-with-disabilities-in-benue-state",
-  "/news-feed/significant-action-on-the-disability-bill-benue-state",
+  "/news-feed/changing-narratives-storytelling-advocacy",
+  "/news-feed/disability-act-implementation-benue-state",
+  "/news-feed/empower-her-advancing-shr-rights-in-jos",
+  "/news-feed/gbv-prevention-training-kano-idp-camps",
   "/our-approach",
 ];
 

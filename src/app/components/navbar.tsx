@@ -65,13 +65,13 @@ export const Navbar = () => {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
           onClick={handleClick}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-900 transition hover:bg-slate-100 md:hidden"
+          className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border-2 border-slate-200 bg-white shadow-sm text-slate-700 transition hover:border-brand-500 hover:bg-white hover:shadow-md md:hidden"
         >
           <span className="sr-only">{isOpen ? 'Close menu' : 'Open menu'}</span>
-          <div className="flex h-5 w-5 flex-col items-center justify-between">
-            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 w-full rounded-full bg-slate-900 transition duration-300 ${isOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+          <div className="flex h-6 w-6 flex-col items-center justify-center gap-1.5">
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-all duration-300 ${isOpen ? 'translate-y-1.5 rotate-45' : ''}`} />
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-opacity duration-300 ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 w-6 rounded-full bg-current transition-all duration-300 ${isOpen ? '-translate-y-1.5 -rotate-45' : ''}`} />
           </div>
         </button>
       </div>

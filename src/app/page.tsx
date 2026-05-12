@@ -104,137 +104,123 @@ export default function Page() {
           </div>
         </div>
       </section>
-     <div className="w-full my-3 md:px-3 flex-grow">
-      <div className="relative overflow-hidden rounded-[2rem]">
-        <Image
-          src='/images/EV_NYFF_2.jpeg'
-          alt="news feed"
-          width={1080}
-          height={360}
-          loading="lazy"
-          sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1080px"
-          className="h-auto w-full min-h-64 object-cover md:max-h-64"
-        />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="absolute top-6 left-4 md:left-8">
-          <h2 className="text-white font-extrabold text-3xl md:text-4xl font-poppins">Latest News</h2>
-        </div>
-      </div>
 
-      <div className="mt-8 grid gap-6 md:grid-cols-3">
-        <Link href='/news-feed/empowering-women-with-disabilities-in-benue-state' className="group">
-          <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <div className="relative">
-              <Image
-                src="/images/EV_NYFF_6.jpeg"
-                alt="Facilitator during community session"
-                height={231}
-                width={288}
-                loading="lazy"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                className="h-[18rem] w-full object-cover"
-              />
-            </div>
-            <div className="p-5 space-y-3">
-              <p className="inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
-                Economic Development
-              </p>
-              <h2 className="text-xl font-extrabold text-slate-950">
-                Building inclusive leadership through practical community training.
-              </h2>
-            </div>
-          </article>
+      {/* Latest News Section */}
+      <div className="w-full my-3 md:px-3 flex-grow">
+       <div className="relative overflow-hidden rounded-[2rem]">
+         <Image
+           src='/images/EV_NYFF_2.jpeg'
+           alt="news feed"
+           width={1080}
+           height={360}
+           loading="lazy"
+           sizes="(max-width: 640px) 640px, (max-width: 1024px) 1024px, 1080px"
+           className="h-auto w-full min-h-64 object-cover md:max-h-64"
+         />
+         <div className="absolute inset-0 bg-black/35" />
+         <div className="absolute top-6 left-4 md:left-8">
+           <h2 className="text-white font-extrabold text-3xl md:text-4xl font-poppins">Latest News</h2>
+         </div>
+       </div>
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+         <Link href='/news-feed/disability-act-implementation-benue-state' className="group">
+           <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+             <div className="relative">
+               <Image
+                 src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778564860/IMG-20260508-WA0078_xlra7m.jpg"
+                 alt="Stakeholders meeting on Disability Act implementation in Benue State"
+                 height={231}
+                 width={288}
+                 loading="lazy"
+                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
+                 className="h-[18rem] w-full object-cover"
+               />
+               <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+                 March 30, 2026
+               </div>
+             </div>
+             <div className="p-5 space-y-3">
+               <p className="inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                 Disability Rights &amp; Policy
+               </p>
+               <h2 className="text-xl font-extrabold text-slate-950">
+                 Strengthening Disability Rights: Implementing the Disability Act in Benue State
+               </h2>
+             </div>
+           </article>
+         </Link>
+
+         <Link href='/news-feed/changing-narratives-storytelling-advocacy' className="group">
+           <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+             <div className="relative">
+               <Image
+                 src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778551214/IMG-20260508-WA0075_axo1w6.jpg"
+                 alt="Storytelling advocacy workshop participants sharing their narratives"
+                 height={231}
+                 width={288}
+                 loading="lazy"
+                 sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
+                 className="h-[18rem] w-full object-cover"
+               />
+               <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+                 October 4, 2025
+               </div>
+             </div>
+             <div className="p-5 space-y-3">
+               <p className="inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
+                 Advocacy &amp; Youth Leadership
+               </p>
+               <h2 className="text-xl font-extrabold text-slate-950">
+                 Changing Narratives: Storytelling for Advocacy
+               </h2>
+             </div>
+           </article>
+         </Link>
+       </div>
+
+       <div className="mt-8 flex justify-center">
+        <Link
+          href='/news-feed'
+          className="inline-flex items-center gap-2 rounded-full bg-brand-700 px-8 py-3 text-sm font-bold text-white shadow-md transition hover:bg-brand-800 hover:shadow-lg"
+        >
+          View All News
         </Link>
-
-        <Link href='/news-feed/significant-action-on-the-disability-bill-benue-state' className="group">
-          <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <div className="relative">
-              <Image
-                src="/images/EV_NYFF_10.jpeg"
-                alt="Community partners in group photo"
-                height={231}
-                width={288}
-                loading="lazy"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                className="h-[18rem] w-full object-cover"
-              />
-            </div>
-            <div className="p-5 space-y-3">
-              <p className="inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
-                Action Story
-              </p>
-              <h2 className="text-xl font-extrabold text-slate-950">
-                Together we rise: collective action for inclusion.
-              </h2>
-            </div>
-          </article>
-        </Link>
-
-        <Link href='/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action' className="group">
-          <article className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <div className="relative">
-              <Image
-                src="/images/EV_NYFF_3.jpeg"
-                alt="Inclusive roundtable discussion"
-                height={231}
-                width={288}
-                loading="lazy"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                className="h-[18rem] w-full object-cover"
-              />
-            </div>
-            <div className="p-5 space-y-3">
-              <p className="inline-flex rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-700">
-                Economic Development
-              </p>
-              <h2 className="text-xl font-extrabold text-slate-950">
-                From silence to voice: dialogue that inspires lasting inclusion.
-              </h2>
-            </div>
-          </article>
-        </Link>
+       </div>
       </div>
 
-      <div className="mt-6 flex justify-center">
-       <Link
-         href='/news-feed'
-         className="inline-flex rounded-full bg-brand-700 px-6 py-2 text-sm font-bold text-white transition hover:bg-brand-800"
-       >
-         See More
-       </Link>
+      {/* Mission & Vision Section */}
+      <div className="md:mb-4 mb-10 w-full md:min-h-[500px] px-8 md:mt-6">
+       <div className="bg-brand-surface w-full flex flex-col md:flex-row justify-between items-start md:px-36 pt-10 space-x-5 px-4 space-y-3 pb-3">
+       <Image
+       src='/images/EV_NYFF_1.jpeg'
+       alt="Mother and child during community event"
+       width={1080}
+       height={720}
+       loading="lazy"
+       sizes="(max-width: 768px) 100vw, 500px"
+       className="h-auto w-full max-w-[500px] object-cover md:min-h-80"/>
+       <div className="flex flex-col justify-between space-y-2 md:space-y-12">
+         <h2 className="md:text-5xl font-extrabold text-3xl text-black font-poppins">
+           Our Mission & Vision
+         </h2>
+         <div className="md:bg-white pt-1 px-2 pb-2 md:p-8 w-full flex flex-col items-center justify-center gap-4 shadow-lg">
+           <p className="text-wrap text-base md:text-lg md:font-bold font-medium md:leading-10 font-poppins">
+             We envision communities where every person, regardless of disability, has the support,
+             voice, and opportunities needed to thrive and lead.
+           </p>
+           <Link
+             href='/about-us'
+             className="rounded-3xl bg-brand-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-brand-800 md:text-base"
+           >
+             Learn More
+           </Link>
+         </div>
+       </div> 
+       </div>
       </div>
-     </div>
-     <div className="md:mb-4 mb-10 w-full md:min-h-[500px] px-8 md:mt-6">
-      <div className="bg-brand-surface w-full flex flex-col md:flex-row justify-between items-start
-      md:px-36 pt-10 space-x-5 px-4 space-y-3 pb-3">
-      <Image
-      src='/images/EV_NYFF_1.jpeg'
-      alt="Mother and child during community event"
-      width={1080}
-      height={720}
-      loading="lazy"
-      sizes="(max-width: 768px) 100vw, 500px"
-      className="h-auto w-full max-w-[500px] object-cover md:min-h-80"/>
-      <div className="flex flex-col justify-between space-y-2 md:space-y-12">
-        <h2 className="md:text-5xl font-extrabold text-3xl text-black font-poppins">
-          Our Mission & Vision
-        </h2>
-        <div className="md:bg-white pt-1 px-2 pb-2 md:p-8 w-full flex flex-col 
-        items-center justify-center gap-4 shadow-lg">
-          <p className="text-wrap text-base md:text-lg md:font-bold font-medium md:leading-10 font-poppins">
-            We envision communities where every person, regardless of disability, has the support,
-            voice, and opportunities needed to thrive and lead.
-          </p>
-          <Link
-            href='/about-us'
-            className="rounded-3xl bg-brand-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-brand-800 md:text-base"
-          >
-            Learn More
-          </Link>
-        </div>
-      </div> 
-      </div>
-      </div>  
+
+      {/* Our Approach Section */}
       <section className="w-full px-6 pb-10 md:px-8">
         <div className="mb-6 flex flex-col gap-2 md:mb-10 md:max-w-3xl">
           <p className="text-sm font-bold uppercase tracking-wide text-brand-700">Our approach</p>
@@ -270,7 +256,6 @@ export default function Page() {
         </div>
       </section>
     </div>
-    
   );
 }
 

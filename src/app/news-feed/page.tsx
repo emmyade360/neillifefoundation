@@ -24,37 +24,77 @@ export default function Page() {
       </div>
 
       <article className="my-4 flex w-full flex-col items-center space-y-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:my-5 md:flex-row md:justify-between md:space-x-8 md:px-10">
-        <Image src="/images/EV_NYFF_2.jpeg" alt="Community stakeholders meeting in session" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 430px" className="object-cover md:h-[304px] md:w-[430px]" />
+        <div className="relative w-full md:w-auto">
+          <Image src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778564860/IMG-20260508-WA0078_xlra7m.jpg" alt="Stakeholders meeting on Disability Act implementation in Benue State" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 430px" className="object-cover md:h-[304px] md:w-[430px]" />
+          <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+            March 30, 2026
+          </div>
+        </div>
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
-          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COMMUNITY LEADERSHIP</p>
-          <h2 className="text-xl font-bold font-poppins md:text-3xl">Building Inclusive Leadership with Persons with Disabilities in Benue State</h2>
-          <Link href='/news-feed/empowering-women-with-disabilities-in-benue-state' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">DISABILITY RIGHTS &AMP; POLICY</p>
+          <h2 className="text-xl font-bold font-poppins md:text-3xl">Strengthening Disability Rights: Implementing the Disability Act in Benue State</h2>
+          <Link href='/news-feed/disability-act-implementation-benue-state' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
             Read Story
           </Link>
         </div>
       </article>
 
       <article className="my-4 flex w-full flex-col items-center space-y-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:my-5 md:flex-row md:justify-between md:space-x-8 md:px-10">
-        <Image src="/images/EV_NYFF_3.jpeg" alt="Roundtable dialogue participants collaborating" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 377px" className="max-h-[258px] md:h-[304px] md:min-w-[377px]" />
+        <div className="relative w-full md:w-auto">
+          <Image src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778551214/IMG-20260508-WA0075_axo1w6.jpg" alt="Storytelling advocacy workshop participants sharing their narratives" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 430px" className="object-cover md:h-[304px] md:w-[430px]" />
+          <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+            October 4, 2025
+          </div>
+        </div>
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
-          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">INCLUSION DIALOGUE</p>
-          <h2 className="text-xl font-bold font-poppins md:text-3xl">From Silence to Voice: How Dialogue is Advancing Disability Inclusion</h2>
-          <Link href='/news-feed/empowering-women-and-girls-with-disabilities-through-inclusive-climate-action' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">ADVOCACY &AMP; YOUTH LEADERSHIP</p>
+          <h2 className="text-xl font-bold font-poppins md:text-3xl">Changing Narratives: Storytelling for Advocacy</h2>
+          <Link href='/news-feed/changing-narratives-storytelling-advocacy' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
             Read Story
           </Link>
         </div>
       </article>
 
       <article className="my-4 flex w-full flex-col items-center space-y-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:my-5 md:flex-row md:justify-between md:space-x-8 md:px-10">
-        <Image src='/images/EV_NYFF_10.jpeg' alt="Group portrait of participants and partners" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 377px" className="max-h-[258px] md:h-[304px] md:min-w-[377px]" />
+        <div className="relative w-full md:w-auto">
+          <Image src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778575035/IMG-20260508-WA0072_1_g2aziu.jpg" alt="GBV prevention training session at Kano IDP camp" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 430px" className="object-cover md:h-[304px] md:w-[430px]" />
+          <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+            August 18, 2025
+          </div>
+        </div>
         <div className="flex flex-col space-y-3 px-3 md:space-y-6">
-          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COLLECTIVE ACTION</p>
-          <h2 className="text-xl font-bold font-poppins md:text-3xl">Together We Rise: Partnerships Driving Lasting Change</h2>
-          <Link href='/news-feed/significant-action-on-the-disability-bill-benue-state' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">COMMUNITY SAFETY</p>
+          <h2 className="text-xl font-bold font-poppins md:text-3xl">Building Safer Communities: Gender Based Violence Prevention in Kano</h2>
+          <Link href='/news-feed/gbv-prevention-training-kano-idp-camps' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
             Read Story
           </Link>
         </div>
       </article>
+
+      <article className="my-4 flex w-full flex-col items-center space-y-3 rounded-xl border border-slate-200 bg-white p-4 shadow-sm md:my-5 md:flex-row md:justify-between md:space-x-8 md:px-10">
+        <div className="relative w-full md:w-auto">
+          <Image src="https://res.cloudinary.com/dfcpht2ua/image/upload/q_auto/f_auto/v1778548598/WhatsApp_Image_2026-05-08_at_3.37.27_PM_mo4p9q.jpg" alt="Empower Her event participants at University of Jos" width={321} height={227} loading="lazy" sizes="(max-width: 768px) 100vw, 430px" className="object-cover md:h-[304px] md:w-[430px]" />
+          <div className="absolute right-3 bottom-3 rounded-md bg-brand-700 px-3 py-1 text-xs font-bold text-white">
+            March 19, 2025
+          </div>
+        </div>
+        <div className="flex flex-col space-y-3 px-3 md:space-y-6">
+          <p className="inline w-max rounded-xl bg-neutral-300 px-2 py-1 text-xs font-semibold">EMPOWER HER</p>
+          <h2 className="text-xl font-bold font-poppins md:text-3xl">Empower Her: Advancing SHR Rights for Women and Girls with Disabilities in Jos</h2>
+          <Link href='/news-feed/empower-her-advancing-shr-rights-in-jos' className="inline-block w-max rounded-2xl bg-brand-700 px-4 py-1 text-lg font-semibold text-white transition hover:bg-brand-800">
+            Read Story
+          </Link>
+        </div>
+      </article>
+
+      <div className="mt-8 flex justify-center">
+        <Link
+          href='/news-feed'
+          className="inline-flex items-center gap-2 rounded-full bg-brand-700 px-8 py-3 text-sm font-bold text-white shadow-md transition hover:bg-brand-800 hover:shadow-lg"
+        >
+          View All News
+        </Link>
+      </div>
     </div>
   )
 }
