@@ -47,7 +47,7 @@ export default function Page() {
         </p>
 
         <p className="text-base font-poppins leading-6 text-brand-950 md:leading-8">
-          On March 19th, the Nell Life Foundation, in collaboration with @sauri_growth_initiative_ and @msichoicesng, came together to host a powerful and transformative event themed "Empower Her" — a program that was dedicated to advocating for the sexual and reproductive health and rights (SHR) of women and girls with disabilities in University of Jos.
+          On March 19th, the Nell Life Foundation, in collaboration with @sauri_growth_initiative_ and @msichoicesng, came together to host a powerful and transformative event themed &ldquo;Empower Her&rdquo; — a program that was dedicated to advocating for the sexual and reproductive health and rights (SHR) of women and girls with disabilities in University of Jos.
         </p>
 
         <div className="space-y-6 md:grid md:grid-cols-2 md:gap-3 md:space-y-0">
